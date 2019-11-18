@@ -1,0 +1,31 @@
+<!--<label>username</label>
+<input type="text" (keyup)="modified()">
+<h1 *ngIf= "name else abc then xyz"></h1>
+<ng-template #xyz>
+    <h1>Display value:{{name}}</h1>
+</ng-template>
+<ng-template #abc>
+    <h1>nothing to load</h1>
+</ng-template>-->
+<div id="search">
+<input type="search" placeholder="search value" (keyup)="search($event)"/>
+</div>
+<table class="table table-striped bg-primary">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of users" id="{{data.id}}">
+            <td > <a href="useredit/{{data.id}}">{{data.id}}</a></td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td><button class="btn btn-success" (click)="gotoEdit(data.id)">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+
+<div>
+    <label>Name:</label>
+<input type="text" value="{{currentuser.name}}"  (change)="changedata('name',$event)"/>
+</div>
+<div>
+    <label>User Name:</label>
+<input type="text" value="{{currentuser.username}}"  (change)="changedata('username',$event)">
+</div>
+<div>
+    <label>Email:</label>
+<input type="text" value="{{currentuser.email}}" (change)="changedata('email',$event)">
+</div>
+<div>
+    <label>Phone-No:</label>
+<input type="text" value="{{currentuser.phone}}" (change)="changedata('phoneno',$event)">
+</div>
+<div>
+    <label>Website:</label>
+<input type="text" value="{{currentuser.website}}" (change)="changedata('website',$event)">
+</div>
+<button (click)="change()">Save</button>
+<button (click)="change()" style="background-color: blueviolet;margin-left:15px;">cancel</button>
